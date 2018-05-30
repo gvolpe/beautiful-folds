@@ -10,10 +10,11 @@ package object benchmarks {
   type StatsResult = ((Int, Int), Double)
 
   /**
+    * 10^6 == one million
     * 10^7 == ten million
     * 10^8 == hundred million
     * */
-  val RangeTop: Int = 1 * math.pow(10, 8).toInt
+  val RangeTop: Int = 1 * math.pow(10, 6).toInt
 
   implicit val idToIO: (Id ~> IO) = new (Id ~> IO) {
     override def apply[A](fa: Id[A]): IO[A] = IO.pure(fa)

@@ -19,6 +19,7 @@ lazy val root = (project in file(".")).
       "-language:experimental.macros",
       "-unchecked",
       //"-Xfatal-warnings",
+      "-Ypartial-unification",
       "-Xlint",
       "-Yno-adapted-args",
       "-Ywarn-dead-code",
@@ -33,10 +34,12 @@ lazy val root = (project in file(".")).
       "100"
     ),
     addCompilerPlugin(Libraries.kindProjector),
+    resolvers += Resolver.sonatypeRepo("snapshots"),
     libraryDependencies ++= Seq(
       Libraries.cats,
       Libraries.catsEffect,
-      Libraries.fs2,
+      Libraries.fs2Core,
+      Libraries.fs2io,
       Libraries.origamiCore,
       Libraries.origamiLib,
       Libraries.origamiFs2,

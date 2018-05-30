@@ -20,7 +20,8 @@ object Dependencies {
 
     lazy val cats       = "org.typelevel"         %% "cats-core"    % Version.cats
     lazy val catsEffect = "org.typelevel"         %% "cats-effect"  % Version.catsEffect
-    lazy val fs2        = "co.fs2"                %% "fs2-core"     % Version.fs2
+    lazy val fs2Core    = "co.fs2"                %% "fs2-core"     % Version.fs2
+    lazy val fs2io      = "co.fs2"                %% "fs2-io"       % Version.fs2
     lazy val scalaTest  = "org.scalatest"         %% "scalatest"    % Version.scalaTest
 
     lazy val kindProjector  = "org.spire-math"        %% "kind-projector"   % Version.kindProjector
